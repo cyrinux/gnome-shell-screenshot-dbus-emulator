@@ -1,0 +1,12 @@
+[Unit]
+Description=Gnome shell screenshot emulator for Zoom
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/gnome-shell-screenshot-dbus-emulator DP-1
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
