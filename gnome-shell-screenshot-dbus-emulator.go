@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/godbus/dbus/v5"
+	"os"
 	"os/exec"
 )
 
@@ -19,8 +20,11 @@ func RunCommand(include_cursor bool, filename string) {
 	} else {
 		cursor = ""
 	}
-	// cmd := exec.Command("/usr/bin/grim", cursor, filename)
-	cmd := exec.Command("/usr/bin/grim", "-o", "DP-1", cursor, filename)
+	output := "DP-1"
+	if len(os.Args) > 1 {
+		output = os.Args[1]
+	}
+	cmd := exec.Command("/usr/bin/grim", "-o", output, cursor, filename)
 	cmd.Run()
 }
 
