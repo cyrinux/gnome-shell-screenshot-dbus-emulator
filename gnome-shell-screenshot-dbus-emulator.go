@@ -21,8 +21,8 @@ func RunCommand(include_cursor bool, filename string) {
 		cursor = ""
 	}
 	output := "DP-1"
-	if len(os.Args) > 1 {
-		output = os.Args[1]
+	if len(os.Getenv("OUTPUT")) > 0 {
+		output = os.Getenv("OUTPUT")
 	}
 	cmd := exec.Command("/usr/bin/grim", "-o", output, cursor, filename)
 	cmd.Run()
