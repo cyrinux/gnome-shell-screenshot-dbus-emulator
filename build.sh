@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-go build -ldflags "-s" gnome-shell-screenshot-dbus-emulator.go
+mkdir -p ~/.local/bin
+go build -ldflags "-s" -o ~/.local/bin/gnome-shell-screenshot-dbus-emulator gnome-shell-screenshot-dbus-emulator.go
