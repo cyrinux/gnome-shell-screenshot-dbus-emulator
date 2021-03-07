@@ -7,3 +7,12 @@ Check this to fix problems with Zoom: https://gitlab.com/jamedjo/gnome-dbus-emul
 # Archlinux
 
 AUR package available here https://aur.archlinux.org/packages/gnome-shell-screenshot-dbus-emulator
+
+# Zoom
+
+To make it working with Zoom, add the following in the `~/.config/zoomus.conf` config file.
+
+```
+[AS]
+showframewindow=false
+```
