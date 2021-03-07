@@ -34,7 +34,7 @@ func requestName(conn *dbus.Conn, name string) {
 		panic(err)
 	}
 	if reply != dbus.RequestNameReplyPrimaryOwner {
-		panic("Name already taken")
+		panic("Name " + name + " already taken")
 	}
 }
 

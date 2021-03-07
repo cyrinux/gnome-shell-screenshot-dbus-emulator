@@ -1,1 +1,4 @@
-/gnome-shell-screenshot-dbus-emulator
+.vscode/*
+gnome-shell-screenshot-dbus-emulator
+vendor/
+
