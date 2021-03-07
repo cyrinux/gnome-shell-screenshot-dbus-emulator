@@ -73,7 +73,7 @@ dist: clean vendor build release
 	(cd "$(TMP)" && tar -cvzf "$(BIN)-$(VERSION)-src.tar.gz" "$(BIN)-$(VERSION)")
 
 	mkdir "$(TMP)/$(BIN)-$(VERSION)-linux64"
-	cp LICENSE.md README.md example/style.css example/livestatus.toml "$(TMP)/$(BIN)-$(VERSION)-linux64"
+	cp LICENSE.md README.md "$(TMP)/$(BIN)-$(VERSION)-linux64"
 	(cd "$(TMP)" && tar -cvzf "$(BIN)-$(VERSION)-linux64.tar.gz" "$(BIN)-$(VERSION)-linux64")
 
 	mkdir -p dist
